@@ -1,6 +1,6 @@
 .banner {
   padding: 88px var(--pad-x);
-  background: var(--blue);
+  background: linear-gradient(135deg, var(--blue) 0%, #0D1F4A 100%);
   text-align: center;
 }
 

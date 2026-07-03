@@ -8,7 +8,7 @@ const stats = [
 ]
 
 const sectors = ['Santé', 'Agriculture', 'Énergie', 'Logistique', 'Éducation', 'Finance', 'Administration publique', 'ONG']
-const ticker = [...sectors, ...sectors]
+const ticker = [...sectors, ...sectors, ...sectors, ...sectors]
 
 export default function Impact() {
   return (

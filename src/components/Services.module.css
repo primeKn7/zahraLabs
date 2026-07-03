@@ -4,7 +4,10 @@
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.header { margin-bottom: 48px; }
+.header {
+  margin-bottom: 48px;
+  text-align: center;
+}
 .sectionTitle { color: var(--white) !important; }
 .eyebrowLight { color: rgba(255, 255, 255, 0.45) !important; }
 
