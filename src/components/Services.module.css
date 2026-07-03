@@ -19,7 +19,7 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-card);
   padding: 28px 22px;
   color: var(--white);
@@ -28,7 +28,7 @@
   overflow: hidden;
 }
 
-.card:hover { background: rgba(255, 255, 255, 0.16); }
+.card:hover { background: rgba(255, 255, 255, 0.12); }
 
 .num {
   font-size: 11px;
