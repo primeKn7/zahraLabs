@@ -1,0 +1,132 @@
+.section {
+  padding: var(--pad-y) var(--pad-x);
+  background: #1A3A8F;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header { margin-bottom: 48px; }
+.sectionTitle { color: var(--white) !important; }
+.eyebrowLight { color: rgba(255, 255, 255, 0.45) !important; }
+
+/* ── Desktop grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: #2B52C8;
+  border-radius: var(--radius-card);
+  padding: 28px 22px;
+  color: var(--white);
+  transition: background 0.18s;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.card:hover { background: #3360D4; }
+
+.num {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.card h4 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+}
+
+.card p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+/* ── Mobile accordion (hidden on desktop) ── */
+.accordion { display: none; }
+
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  /* Hide grid, show accordion */
+  .grid { display: none; }
+  .accordion { display: block; }
+
+  .accItem {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .accItem:last-child { border-bottom: none; }
+
+  .accBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    background: none;
+    border: none;
+    color: var(--white);
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--font-body);
+  }
+
+  .accNum {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.35);
+    flex-shrink: 0;
+    width: 28px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .accTitle {
+    flex: 1;
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .accChevron {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
+    transition: transform 0.25s;
+    line-height: 1;
+  }
+
+  .accOpen .accChevron {
+    transform: rotate(90deg);
+    color: var(--white);
+  }
+
+  .accBody {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+
+  .accOpen .accBody {
+    max-height: 120px;
+  }
+
+  .accBody p {
+    padding: 0 0 16px 40px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+  }
+}
